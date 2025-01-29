@@ -73,7 +73,9 @@
 .nav a.active.scrolled {
     background-color: #222b48;
     color: white;
-    border-style: none;
+    /* border-width: 3px; */
+    border-color: #222b48;
+    /* border-style: solid;   */
 }
 
 .nav a.scrolled {
