@@ -65,6 +65,13 @@
             margin-top: 20px;
         }
 
+        .maintitle h3 {
+            font-size: 1.5em;
+            margin: 0;
+            z-index: 1;
+            margin-top: 20px;
+        }
+
         .fadingbox {
             width: 100%;
             height: 100px;
@@ -416,17 +423,16 @@
         .latestblogpost h2 {
             font-size: 3rem;
         }
-
     </style>
 </head>
 
 <body>
     <header class="header">
         <div class="logo">
-            <a href="index.html" style="height: 100%;" > 
+            <a href="index.html" style="height: 100%;">
                 <img src="images/MARS Logo.png" alt="MARS Logo" style="height: 100%; margin-right: 10px;">
             </a>
-                <h2>MARS</h2>
+            <h2>MARS</h2>
         </div>
         <nav class="nav">
             <a href="index.html" class="active">Home</a>
@@ -438,7 +444,8 @@
     <section class="hero">
         <div class="background"></div>
         <div class="maintitle">
-            <h1>Mechatronics and Robotics Society (MARS) at UVA</h1>
+            <h1>MARS at UVA</h1>
+            <h3>Mechatronics and Robotics Society</h3>
             <h2>NASA Lunabotics Team</h2>
         </div>
         <div class="fadingbox"></div>
@@ -446,19 +453,18 @@
 
     <section class="about">
         <div class="about-image">
-            <img src="images/stockimg1.jpg">
+            <img src="images/bucket drum spinning 2025.gif">
         </div>
         <div class="about-content">
             <h2>About Us</h2>
-            <p>The Mechatronics and Robotics Society (MARS) at UVA is a student-run, experimental engineering club
-                dedicated to creating leaders in STEM.</p>
-            <p>Every year, we build a janky moon rover for the NASA Robotic Mining Competition. This year, our robot
-                will mine regolith to build berms.</p>
+            <p>Every year, we build a Moon robot for the 
+                <a href="https://www.nasa.gov/learning-resources/lunabotics-challenge/" style="color:black">NASA Lunabotics Challenge</a>. 
+                This year, our robot will mine lunar regolith (lunar soil) and construct berms.</p>
             <ul>
                 <li>Gain hands-on experience in design, machining, circuitry, and coding</li>
                 <li>Practice organizing and collaborating with a professional engineering team</li>
                 <li>Volunteer to promote STEM in the Charlottesville community</li>
-                <li>Based out of Lacy Hall in Charlottesville, Virginia</li>
+                <li>Based out of Lacy Hall at the University of Virginia</li>
             </ul>
         </div>
     </section>
@@ -497,7 +503,10 @@
             <div class="help">
                 <h3>Sponsors</h3>
                 <div class="icon">
-                    &#x1F911;
+                    <!-- &#x1F911; -->
+                    <!-- &#x1F4C8; -->
+                    <!-- &#x1F4B0; -->
+                    &#x1F91D;
                 </div>
                 <p>
                     We accept any donation, no matter the size.
@@ -539,7 +548,7 @@
         </h2>
         <div id="latestblogpost">
             <!-- This will auto inject the top thumbnail on the blogs page -->
-        </div>     
+        </div>
     </section>
 
     <section class="sponsors">
@@ -594,7 +603,8 @@
                         </svg></a>
                     <h2>hoosmininguva@gmail.com</h2>
                     <svg onclick="copyemail()" id="copybutton" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                        <path fill-rule="evenodd"
+                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
                     </svg>
                 </div>
             </div>
@@ -642,21 +652,21 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const blogPageURL = "blog.html"; // Replace with the actual URL of your blog page.
-    
+
             fetch(blogPageURL)
                 .then(response => response.text())
                 .then(html => {
                     // Parse the blog page HTML.
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(html, "text/html");
-    
+
                     // Find the first thumbnail.
                     const firstThumbnail = doc.querySelector("a .thumbnail");
-                    
+
                     if (firstThumbnail) {
                         // Clone the thumbnail and its parent link.
                         const parentLink = firstThumbnail.closest("a").cloneNode(true);
-    
+
                         // Insert into the homepage's "latestblogpost" section.
                         const latestBlogPostSection = document.getElementById("latestblogpost");
                         if (latestBlogPostSection) {
@@ -670,7 +680,7 @@
                 });
         });
     </script>
-    
+
 </body>
 
 </html>
