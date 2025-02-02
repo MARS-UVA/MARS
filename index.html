@@ -15,7 +15,7 @@
         body {
             margin: 0;
             font-family: Lexend;
-            background-color: #f9f9f9;
+            background-color: #EEE;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -341,13 +341,14 @@
             border-width: 2px;
             border-style: solid;
             margin: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, color 0.3s ease;
             background-color: #FFF;
+            border-radius: 60px;
         }
 
         .thumbnail:hover {
             transform: scale(1.05);
-            background-color: rgb(255, 228, 218);
+            background-color: #EEE;
         }
 
         .thumbnail .mainpic {
@@ -355,6 +356,8 @@
             width: 50%;
             aspect-ratio: 4/3;
             object-fit: cover;
+            border-radius: 60px 0px 0px 60px;
+            
         }
 
         .thumbnail .info {
