@@ -379,7 +379,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('team.csv')
+            fetch('people.csv')
                 .then(response => response.text())
                 .then(data => {
                     const sections = parseCSV(data);
