@@ -64,7 +64,7 @@
         }
 
         .group h2 {
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
         .group {
@@ -97,7 +97,7 @@
                 text-align: center;
             }
         }
-
+        
         .group .member {
             width: 90%;
             display: flex;
@@ -160,19 +160,23 @@
         }
 
         .exec {
-            background-color: #4a89ff;
+            background-color: #4a89ff; 
+            border-color: #4a89ff; 
         }
 
         .mechanical {
-            background-color: #9b81cf
+            background-color: #9b81cf;
+            border-color: #9b81cf;
         }
 
         .computer {
             background-color: #ad1457;
+            border-color: #ad1457;
         }
 
         .electrical {
             background-color: #66ca93;
+            border-color: #66ca93;
         }
 
         .systems {
@@ -188,7 +192,7 @@
                 height: 300px;
             }
 
-            .hero .buttons a{
+            .hero .buttons a {
                 font-size: 1.5rem;
             }
 
@@ -197,13 +201,50 @@
             }
 
         }
+
+        .teampic{
+            object-fit: cover;
+            border-radius: 50px;
+            border-style: solid;
+            border-width: 7px;
+            transition: transform 0.3s ease;
+        }
+
+        .teampic:hover {
+            transform: scale(1.05);
+        }
+
+        .teampic img {
+            width: 100%;
+            height: auto;            
+            border-radius: 46px;
+        }
+
+
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4a89ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        #backToTop:hover {
+            background: #0056b3;
+        }
     </style>
 </head>
 
 <body>
     <header class="header scrolled">
         <div class="logo">
-            <a href="index.html" style="height: 100%;" > 
+            <a href="index.html" style="height: 100%;">
                 <img src="images/MARS Logo.png" alt="MARS Logo" style="height: 100%; margin-right: 10px;">
             </a>
             <h2>MARS</h2>
@@ -232,6 +273,9 @@
         <div class="grouptitle">
             <h2>Executives</h2>
         </div>
+        <div class="teampic exec">
+            <img src="images/executive team.jpg">
+        </div>
         <div class="members">
             <div class="member">
                 <div class="pic">
@@ -247,9 +291,13 @@
         </div>
     </section>
 
+
     <section class="group" id="mechanical">
         <div class="grouptitle">
             <h2>Mechanical</h2>
+        </div>
+        <div class="teampic mechanical">
+            <img src="images/mechanical team.jpg">
         </div>
         <div class="members">
             <div class="member">
@@ -270,6 +318,9 @@
         <div class="grouptitle">
             <h2>Computer</h2>
         </div>
+        <div class="teampic computer">
+            <img src="images/computer team.jpg">
+        </div>
         <div class="members">
             <div class="member">
                 <div class="pic">
@@ -289,6 +340,9 @@
         <div class="grouptitle">
             <h2>Electrical</h2>
         </div>
+        <div class="teampic electrical" style="max-width: 50%;">
+            <img src="images/electrical team.jpg">
+        </div>
         <div class="members">
             <div class="member">
                 <div class="pic">
@@ -304,6 +358,7 @@
         </div>
     </section>
 
+    <button id="backToTop" onclick="scrollToTop()"> &#x1F446; </button>
 
 
     <footer class="footer">
@@ -390,7 +445,12 @@
                             const membersContainer = section.querySelector('.members');
                             membersContainer.innerHTML = ''; // Clear existing content
                             members.forEach(member => {
-                                const card = createMemberCard(member);
+                                var formalpic = "";
+                                console.log(team)
+                                if (team == "Exec") {
+                                    formalpic = "_formal"
+                                }
+                                const card = createMemberCard(member, formalpic);
                                 membersContainer.appendChild(card);
                             });
                         }
@@ -431,7 +491,7 @@
             return sections;
         }
 
-        function createMemberCard({ name, position, team }) {
+        function createMemberCard({ name, position, team }, formalpic) {
             const card = document.createElement('div');
             card.classList.add('member');
 
@@ -443,7 +503,7 @@
 
             card.innerHTML = `
             <div class="pic">
-                <img src="images/members/${name}.jpg" alt="${name}">
+                <img src="images/members/${name + formalpic}.jpg" alt="${name}">
             </div>
             ${positionHTML}
             <div class="name">
