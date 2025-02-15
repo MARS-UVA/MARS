@@ -149,12 +149,13 @@
             border-radius: 20px;
             padding: 5px 15px;
             color: white;
+            margin-bottom: 10px;
             margin-top: 10px;
         }
 
         .group .member h3 {
             font-size: 2rem;
-            margin-top: 15px;
+            margin-top: 10px;
             margin-bottom: 5px;
             text-align: center;
         }
@@ -505,10 +506,11 @@
             <div class="pic">
                 <img src="images/members/${name + formalpic}.jpg" alt="${name}">
             </div>
-            ${positionHTML}
             <div class="name">
                 <h3>${name}</h3>
-            </div>`;
+            </div>
+            ${positionHTML}
+            `;
 
             // Set up fallback to default.jpg
             const img = card.querySelector('img');
