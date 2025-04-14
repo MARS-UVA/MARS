@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berm Volume Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label, input, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    input, select {
+      padding: 0.5rem;
+    }
+    button {
+      padding: 0.7rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Berm Volume Calculator</h2>
+    <label for="diameter">Enter Berm Diameter:</label>
+    <input type="number" id="diameter" placeholder="e.g. 4" step="0.01" />
+    <label for="height">Enter Berm Height:</label>
+    <input type="number" id="height" placeholder="e.g. 2" step="0.01" />
+    <select id="unit">
+      <option value="m">meters</option>
+      <option value="cm">centimeters</option>
+      <option value="in">inches</option>
+    </select>
+    <button onclick="calculateVolume()">Calculate Volume</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateVolume() {
+      const diameterInput = parseFloat(document.getElementById("diameter").value);
+      const heightInput = parseFloat(document.getElementById("height").value);
+      const unit = document.getElementById("unit").value;
+      const result = document.getElementById("result");
+
+      if (isNaN(diameterInput) || diameterInput <= 0 || isNaN(heightInput) || heightInput <= 0) {
+        result.textContent = "Please enter valid diameter and height.";
+        return;
+      }
+
+      // Convert input to meters
+      let diameterInMeters, heightInMeters;
+      if (unit === "m") {
+        diameterInMeters = diameterInput;
+        heightInMeters = heightInput;
+      } else if (unit === "cm") {
+        diameterInMeters = diameterInput / 100;
+        heightInMeters = heightInput / 100;
+      } else if (unit === "in") {
+        diameterInMeters = diameterInput * 0.0254;
+        heightInMeters = heightInput * 0.0254;
+      }
+
+      const radius = diameterInMeters / 2;
+      const volume_m3 = (Math.PI * Math.pow(radius, 2) * heightInMeters) / 3;
+      const volume_L = (volume_m3 * 1000).toFixed(2);
+
+      result.innerHTML = `Estimated volume: <br><strong>${volume_L} L</strong>`;
+    }
+  </script>
+</body>
+</html>
