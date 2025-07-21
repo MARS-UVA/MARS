@@ -4,6 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MARS at UVA: The Mechatronics and Robotics Society. UVA's NASA Lunabotics team, building lunar robots, promoting STEM, and fostering engineering leaders.">
+    <meta name="keywords"
+        content="MARS, UVA, Mechatronics, Robotics, NASA Lunabotics, Engineering, STEM, University of Virginia, Moon robot, Student organization, Outreach">
+    <meta name="author" content="Mechatronics and Robotics Society (MARS) at UVA">
+    <meta property="og:title" content="MARS at UVA - Mechatronics and Robotics Society">
+    <meta property="og:description"
+        content="UVA's NASA Lunabotics team. Building lunar robots, promoting STEM, and fostering engineering leaders.">
+    <meta property="og:image" content="https://marsatuva.org/images/MARS%20Logo.png">
+    <meta property="og:url" content="https://marsatuva.org/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MARS at UVA - Mechatronics and Robotics Society">
+    <meta name="twitter:description"
+        content="UVA's NASA Lunabotics team. Building lunar robots, promoting STEM, and fostering engineering leaders.">
+    <meta name="twitter:image" content="https://marsatuva.org/images/MARS_TEAM.jpg">
     <title>MARS at UVA</title>
     <link rel="icon" href="images/MARS Logo.png">
     <link rel="stylesheet" href="styles.css">
@@ -395,14 +411,22 @@
             border-radius: 50%;
         }
 
-        @media (max-width: 500px) {
+         @media (max-width: 500px) {
             .thumbnail {
                 flex-direction: column;
-                margin: 20px 10px;
+                /* margin: 20px 10px; */
+            }
+
+            .thumbnail .mainpic {
+                width: 100%;
+                aspect-ratio: 16/9;
+                border-radius: 60px 60px 0px 0px;
             }
 
             .thumbnail .info {
-                padding: 0 15px;
+                width: 90%;
+                padding: 15px;
+                margin-top: -25px;
             }
 
             .thumbnail .info h2 {
