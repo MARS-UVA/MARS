@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="MARS at UVA: Read our latest blog posts about our lunar robotics projects, STEM outreach, and team updates.">
+    <meta name="keywords"
+        content="MARS, UVA, Mechatronics, Robotics, NASA Lunabotics, Engineering, STEM, University of Virginia, Moon, Robot, Student organization, Outreach, Blog">
+    <meta name="author" content="Mechatronics and Robotics Society (MARS) at UVA">
+    <meta property="og:title" content="BLOG by MARS at UVA">
+    <meta property="og:description"
+        content="UVA's NASA Lunabotics team. Building lunar robots, promoting STEM, and fostering engineering leaders.">
+    <meta property="og:image" content="https://marsatuva.org/images/MARS%20Logo.png">
+    <meta property="og:url" content="https://marsatuva.org/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MARS at UVA - Mechatronics and Robotics Society">
+    <meta name="twitter:description"
+        content="UVA's NASA Lunabotics team. Building lunar robots, promoting STEM, and fostering engineering leaders.">
+    <meta name="twitter:image" content="https://marsatuva.org/images/MARS_TEAM.jpg">
+    <title>BLOG | MARS at UVA</title>
+    <link rel="icon" href="../images/MARS Logo.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Lexend;
+            background-color: #EEE;
+            background: linear-gradient(180deg, rgba(255, 255, 240, 1) 0%, rgba(236, 255, 253, 1) 33%, rgba(251, 244, 255, 1) 66%, rgba(255, 236, 236, 1) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+    
+        h1,
+        h2 {
+            font-family: Lexend;
+        }
+    
+        .headerspacing {
+            height: 80px;
+        }
+    
+        section {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            color: #333;
+            scroll-margin-top: 100px;
+        }
+    
+        .hero {
+            max-width: 1200px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+    
+        .hero p {
+            font-size: 1.25rem;
+        }
+    
+        .hero .meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    
+        .hero .meta .stack {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .hero .meta .stack p {
+            margin: 0;
+            font-weight: 300;
+            font-size: 1.25rem;
+        }
+    
+        .hero .meta img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    
+        section {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            /* border-top: 5px solid #e0e0e0; */
+            gap: 20px;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 1000px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        section img {
+            flex: 2;
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        .content {
+            flex: 2;
+            padding: 20px;
+            color: black;
+        }
+    
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            /* text-align: center; */
+        }
+    
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+    
+        .content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .content ul li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 2em;
+        }
+    
+        .content ul li::before {
+            content: "\25E6";
+            position: absolute;
+            left: 0;
+            top: -25px;
+            font-size: 3em;
+            color: navy;
+        }
+    
+        .content .sublist {
+            margin-left: 50px;
+        }
+    
+        .content .sublist li::before {
+            content: "\25E6";
+            position: absolute;
+            left: 0;
+            top: -25px;
+            font-size: 3em;
+            color: navy;
+        }
+    
+        .icons {
+            margin-top: 20px;
+            width: auto;
+            display: flex;
+            gap: 20px;
+        }
+    
+        .icons svg {
+            height: 50px;
+            width: auto;
+            fill: navy;
+        }
+    
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column-reverse;
+                padding: 10px;
+            }
+    
+            .image {
+                margin-right: 0;
+                margin-bottom: 20px;
+                height: 300px;
+            }
+        }
+    
+        .smallItallics {
+            font-size: .9rem;
+            font-style: italic;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled">
+        <div class="logo">
+            <a href="../index.html" style="height: 100%;">
+                <img src="../images/MARS Logo.png" alt="MARS Logo" style="height: 100%; margin-right: 10px;">
+            </a>
+            <h2>MARS</h2>
+        </div><nav class="nav">
+            <a href="../index.html" class="scrolled">Home</a>
+            <a href="../team.html" class="scrolled">Team</a>
+            <a href="../blog.html" class="scrolled">Blog</a>
+        </nav>
+    </header>
+
+    <section class="headerspacing"> </section>
+
+    <!-- MAIN PAGE TITLE -->
+    <div class="hero">
+        <!-- MAIN PAGE TITLE -->
+        <h1>The Mechatronics and Ro-Brrrr-tics Society: MARS Winter & Fall Recap! ❄️</h1>
+        <!-- AUTHOR INFORMATION (Profile Pic, Name, and Date) -->
+        <div class="meta">
+            <img src="../images/members/Taylor Levitas.jpg" alt="pfp">
+            <div class="stack">
+                <p class="author">Taylor Levitas</p>
+                <p class="date">February 2025</p>
+            </div>
+        </div>
+        <!-- MAIN SUB TITLE -->
+        <p>
+            We extend an extra WARM greeting to our lovely MARS enthusiasts, followers, and first-time blog-viewers! We
+            are very excited to be reinstituting this blog page for the upcoming semester, and hope you all choose to
+            stay along for the MARS journey - from our progress on the lunar rover, exciting outreach events, to fun
+            along the way.
+        </p>
+    </div>
+    
+    <!-- 
+        Each section has an image and a block of text
+        The image can be on the left or right of the text, just change the order of the img and div-content elements
+         
+        For each section, change:
+         - the image
+         - the content heading
+         - the content text (optional: add bullet points or boldness) 
+        -->
+
+    <section>
+        <iframe
+            src="https://docs.google.com/document/d/e/2PACX-1vT0flWxxfY82yKM2XHFKTO0wzIzSNL7O9_IBLW7afU1mWK4DIa-Ko2tY_f06Tiva4ZJGXbG9Bs-uKeU/pub?embedded=true">
+        </iframe>
+    </section>
+
+
+    <footer class="footer">
+        <div class="thickbar">
+            <div class="logo">
+                <img src="../images/blue-logo.jpg" alt="MARS Logo" style="height: 100%;">
+                <h2>Mechatronics and Robotics Society (MARS) at UVA</h2>
+            </div>
+            <div class="socialemail">
+                <div class="socials">
+                    <a href="https://www.instagram.com/marsatuva/" target="_blank" rel="noreferrer noopener">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg> </a>
+                    <a href="https://www.youtube.com/@marsatuva" target="_blank" rel="noreferrer noopener">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/mechatronics-and-robotics-society/" target="_blank"
+                        rel="noreferrer noopener">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg></a>
+                    <a href="https://www.facebook.com/MARSATUVA/" target="_blank" rel="noreferrer noopener">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                        </svg></a>
+                    <a href="https://github.com/MARS-UVA/" target="_blank" rel="noreferrer noopener">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg></a>
+                </div>
+                <div class="email">
+                    <a href="mailto:marsatuva@gmail.com">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                        </svg></a>
+                    <h2>marsatuva@gmail.com</h2>
+                    <svg onclick="copyemail()" id="copybutton" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="thinbar">
+            <p>&copy; <span id="year">2024</span> MARS @ UVA</p>
+            <button onclick="showLegalPopup()">Legal Disclaimers</button>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay" onclick="hideLegalPopup()"></div>
+    <div class="legal-popup" id="legal-popup">
+        <!-- add a picture of craig here -->
+        <p>Although this organization has members who are University of Virginia students and may have University
+            employees associated or engaged in its activities and affairs, the organization is not a part of or an
+            agency of the University. It is a separate and independent organization, which is responsible for and
+            manages its own activities and affairs. The University does not direct, supervise or control the
+            organization and is not responsible for the organization’s contracts, acts or omissions. Additionally, the
+            Mechatronics and Robotics Society does
+            not restrict its membership, programs, or activities on the basis of age, color, disability, gender
+            identity, marital status, national or ethnic origin, political affiliation, race, religion, sex (including
+            pregnancy), sexual orientation, veteran status, or family and genetic information.</p>
+        <button onclick="hideLegalPopup()">Sure, why not</button>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
