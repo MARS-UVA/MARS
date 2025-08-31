@@ -445,6 +445,78 @@
         .latestblogpost h2 {
             font-size: 3rem;
         }
+
+        /* JOIN MARS Popup */
+        .join-mars-popup {
+            display: flex;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 32, 0.45);
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .join-mars-content {
+            background: #fff;
+            border-radius: 24px;
+            padding: 32px 28px 22px 28px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            position: relative;
+            text-align: center;
+            max-width: 350px;
+            width: 90vw;
+            border: 2px solid #2a4d9b;
+            font-family: 'Lexend', Arial, sans-serif;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: none;
+            border: none;
+            font-size: 2.2rem;
+            color: #2a4d9b;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #d32f2f;
+        }
+
+        .mars-popup-header img {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (max-width: 500px) {
+            .join-mars-content {
+                padding: 18px 8px 12px 8px;
+                max-width: 95vw;
+            }
+
+            .close-btn {
+                top: 10px;
+                right: 12px;
+                font-size: 1.7rem;
+            }
+        }
     </style>
 </head>
 
@@ -657,6 +729,34 @@
             pregnancy), sexual orientation, veteran status, or family and genetic information.</p>
         <button onclick="hideLegalPopup()">Sure, why not</button>
     </div>
+
+    <!-- JOIN MARS Popup -->
+    <div id="joinMarsPopup" class="join-mars-popup">
+        <div class="join-mars-content">
+            <button class="close-btn" onclick="document.getElementById('joinMarsPopup').style.display='none'">&times;</button>
+            <div class="mars-popup-header">
+                <img src="images/MARS Logo.png" alt="MARS Logo" style="width:60px; height:60px; border-radius:50%; margin-bottom:10px;">
+                <h2 style="margin:0; color:navy;">JOIN MARS</h2>
+            </div>
+            <p style="font-size:1.15em; margin:20px 0 10px 0;">
+                Fill out our <a href="https://forms.gle/your-interest-form-link" target="_blank" style="color:#2a4d9b; font-weight:bold; text-decoration:underline;">interest form</a> to learn more.
+            </p>
+            <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:1em; color:#222;">
+                <li style="margin-bottom:8px;">&#10003; No dues</li>
+                <li style="margin-bottom:8px;">&#10003; No application</li>
+                <li style="margin-bottom:8px;">&#10003; No experience required</li>
+            </ul>
+            <p style="font-size:0.95em; color:#555;">Everyone is welcome!</p>
+        </div>
+    </div>
+    <script>
+        // Show popup after a short delay
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.getElementById('joinMarsPopup').style.display = 'flex';
+            }, 1500);
+        });
+    </script>
 
     <script>
         window.addEventListener('scroll', () => {
